@@ -3,7 +3,7 @@
 </script>
 
 <template>
-
+  <CcTable />
 </template>
 
 <style scoped lang="scss">
