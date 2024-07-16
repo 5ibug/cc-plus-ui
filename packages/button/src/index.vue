@@ -1,10 +1,10 @@
 <template>
   <el-tooltip v-if="tip" :content="tip" :placement="placement" v-bind="tipProps">
-    <el-button v-bind="$attrs" class="cc-button-tip" @click="handleClick">
+    <el-button v-bind="props" class="cc-button-tip" @click="handleClick">
       <slot />
     </el-button>
   </el-tooltip>
-  <el-button v-else v-bind="$attrs" @click="handleClick">
+  <el-button v-else v-bind="props" @click="handleClick">
     <slot />
   </el-button>
 </template>
