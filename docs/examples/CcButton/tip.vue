@@ -4,7 +4,7 @@
 
 <template>
   <cc-button style="font-size: 28px" tip="编辑" icon="Edit"/>
-  <cc-button tip="删除" icon="Delete">aa</cc-button>
+  <cc-button tip="删除" icon="Delete" />
   <cc-button type="primary" tip="primary" icon="Edit"/>
   <cc-button type="success" tip="success" icon="Check"/>
   <cc-button type="info" tip="info" icon="Message"/>

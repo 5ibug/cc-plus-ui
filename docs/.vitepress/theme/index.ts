@@ -13,7 +13,7 @@ import TVHtml from "../components/TVHtml.vue"
 import TIcon from "../components/TIcon.vue"
 import { VPDemo } from "../vitepress"
 
-import "../../public/css/index.css"
+// import "../../public/css/index.css"
 export default {
   ...DefaultTheme,
   enhanceApp({ app, router, siteData }) {
