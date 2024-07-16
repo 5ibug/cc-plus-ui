@@ -11,26 +11,31 @@
 
 <script setup lang="ts" name="CcButton">
 import { ref } from "vue"
-const props = defineProps({
-  time: {
-    type: Number,
-    default: 1000
-  },
-  tip: {
-    type: String,
-    default: ""
-  },
-  placement: {
-    type: String,
-    default: "top"
-  },
-  tipProps: {
-    type: Object,
-    default: () => ({})
-  }
-})
+import type {ButtonEmit, ButtonProp} from "@/button/type/button";
+
+/**
+ * {
+ *   time: {
+ *     type: Number,
+ *     default: 1000
+ *   },
+ *   tip: {
+ *     type: String,
+ *     default: ""
+ *   },
+ *   placement: {
+ *     type: String,
+ *     default: "top"
+ *   },
+ *   tipProps: {
+ *     type: Object,
+ *     default: () => ({})
+ *   }
+ * }
+ */
+const props = defineProps<ButtonProp>()
 // 抛出事件
-const emits = defineEmits(["click"])
+const emits = defineEmits<ButtonEmit>()
 const record = ref(0)
 const handleClick = () => {
   let newTime = new Date()
