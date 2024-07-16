@@ -22,12 +22,14 @@ export default {
     app.use(ElementPlus, {
       locale // 语言设置
     })
+
+    // 全局注册基础组件
+    app.use(CcPlusUi)
+
     // 注册所有图标
     for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
       app.component(key, component)
     }
-    // 全局注册基础组件
-    app.use(CcPlusUi)
 
     app.component("Demo", VPDemo)
     app.component("TVHtml", TVHtml)

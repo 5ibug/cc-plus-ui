@@ -1,8 +1,10 @@
 // GlobalComponents for Volar
+export { CcButton } from './lib/button';
+export { CcTable } from './lib/table';
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    CcButton: typeof import("./lib/button/src/index.vue")
-    CcTable: typeof import("./lib/table/src/index.vue")
+    CcButton: CcButton
+    CcTable: CcTable
   }
 
   interface ComponentCustomProperties {

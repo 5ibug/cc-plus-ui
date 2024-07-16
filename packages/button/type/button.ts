@@ -1,12 +1,9 @@
-import type {ButtonEmits, ButtonProps} from "element-plus";
+import type {ButtonProps, ButtonEmits, Placement} from "element-plus";
+import type {EpPropMergeType} from "element-plus/es/utils";
 
 export interface ButtonProp extends ButtonProps{
-    time: Number;
-    tip: String;
-    placement: String;
-    tipProps: Object;
-}
-
-export interface ButtonEmit extends ButtonEmits{
-
+    time?: number;
+    tip?: string;
+    placement?: EpPropMergeType<StringConstructor, Placement, unknown> | undefined;
+    tipProps?: object;
 }
